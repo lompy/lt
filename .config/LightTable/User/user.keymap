@@ -1,0 +1,36 @@
+;; User keymap
+;; -----------------------------
+;; Keymaps are stored as a set of diffs that are merged together to create
+;; the final set of keys. You can modify these diffs to either add or
+;; subtract bindings.
+;;
+;; Like behaviors, keys are bound by tag. When objects with those tags are active
+;; the key bindings are live. Keys can be bound to any number of Light Table commands,
+;; allowing you the flexibility to execute multiple operations together. To see a list
+;; of all the commands you can execute, start typing a word related to the thing you
+;; want to do in between the square brackets (e.g. type "editor").
+
+[
+ [:editor "alt-w" :editor.watch.watch-selection]
+ [:editor "alt-shift-w" :editor.watch.unwatch]
+
+ [:tabs "alt-1" (:tabs.goto 0)]
+ [:tabs "alt-2" (:tabs.goto 1)]
+ [:tabs "alt-3" (:tabs.goto 2)]
+ [:tabs "alt-4" (:tabs.goto 3)]
+ [:tabs "alt-5" (:tabs.goto 4)]
+ [:tabs "alt-6" (:tabs.goto 5)]
+ [:tabs "alt-7" (:tabs.goto 6)]
+ [:tabs "alt-8" (:tabs.goto 7)]
+ [:tabs "alt-9" (:tabs.goto :last)]
+
+ [:filter-list.input "ctrl-n" (:filter-list.input.move-selection 1)]
+ [:filter-list.input "ctrl-p" (:filter-list.input.move-selection -1)]
+
+ [:app "ctrl-m" :workspace.show]
+ [:app "-pmeta-n" :new-file]
+ [:editor "ctrl-b" :lt.plugins.gblame/toggle-git-blame]
+
+ ;; To subtract a binding, prefix the key with '-'  e.g.
+ ;;  [:app "-ctrl-shift-d" :docs.search.show]
+]
