@@ -12,17 +12,19 @@
 [
  ;; The app tag is kind of like global scope. You assign behaviors that affect
  ;; all of Light Table to it.
- [:app :lt.objs.style/set-skin "juniper-light"]
+ [:app :lt.objs.style/set-skin "dark"]
  [:app :lt.objs.plugins/load-js "user_compiled.js"]
 
  ;; The editor tag is applied to all editors
  [:editor :lt.objs.editor/no-wrap]
- [:editor :lt.objs.style/set-theme "juniper-light"]
- [:editor :lt.objs.style/font-settings "Ubuntu Mono" "14" ""]
+ [:editor :lt.objs.style/set-theme "solarized-light"]
+ [:editor :lt.objs.style/font-settings "Ubuntu Mono" "15" "1.05"]
  [:editor :lt.plugins.vim/activate-vim]
  [:editor :lt.objs.editor.file/last-char-newline]
  [:editor :lt.objs.editor/line-numbers]
  [:editor :lt.objs.editor/highlight-current-line]
+ [:editor :lt.objs.editor.file/last-char-newline]
+ [:editor :lt.objs.editor.file/remove-trailing-whitespace]
 
  ;; Here we can add behaviors to just clojure editors
  [:editor.clojure :lt.plugins.clojure/print-length 1000]
@@ -32,5 +34,7 @@
 
  ;; To subtract a behavior, prefix the name with '-' e.g.
  ;;  [:app :-lt.objs.intro/show-intro]
-]
 
+ ;; Vim normal mode bindings
+ [:app :lt.plugins.vim/map-keys {"j" "gj", "k" "gk"}]
+]
