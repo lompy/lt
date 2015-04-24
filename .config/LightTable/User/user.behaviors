@@ -17,7 +17,7 @@
 
  ;; The editor tag is applied to all editors
  [:editor :lt.objs.editor/no-wrap]
- [:editor :lt.objs.style/set-theme "solarized-light"]
+ [:editor :lt.objs.style/set-theme "tomorrow-night-eighties"]
  [:editor :lt.objs.style/font-settings "Ubuntu Mono" "15" "1.05"]
  [:editor :lt.plugins.vim/activate-vim]
  [:editor :lt.objs.editor.file/last-char-newline]
@@ -25,6 +25,7 @@
  [:editor :lt.objs.editor/highlight-current-line]
  [:editor :lt.objs.editor.file/last-char-newline]
  [:editor :lt.objs.editor.file/remove-trailing-whitespace]
+ [:editor :lt.objs.editor/wrap]
 
  ;; Here we can add behaviors to just clojure editors
  [:editor.clojure :lt.plugins.clojure/print-length 1000]

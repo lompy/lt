@@ -9,6 +9,7 @@
  "Clojure" "0.1.0",
  "CoffeeScript" "0.0.4",
  "Ctags" "0.0.3",
+ "Emmet" "0.0.2",
  "GBlame" "0.0.8",
  "HTML" "0.0.2",
  "Javascript" "0.0.6",
@@ -25,6 +26,7 @@
  "Vim" "0.1.0",
  "Vim-Focus" "1.0.1",
  "Vim-Sleek" "0.0.1",
- "Whitespace" "0.0.1"},
+ "Whitespace" "0.0.1",
+ "Workspace Nav" "0.0.6"},
  :author "TODO",
  :name "User"}

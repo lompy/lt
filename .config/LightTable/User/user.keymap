@@ -11,9 +11,26 @@
 ;; want to do in between the square brackets (e.g. type "editor").
 
 [
- [:editor "alt-w" :editor.watch.watch-selection]
- [:editor "alt-shift-w" :editor.watch.unwatch]
+ [:app "ctrl-m" :workspace.show]
+ [:app "-pmeta-n" :new-file]
+ [:app "-pmeta-shift-n" :window.new]
+ [:app "ctrl-shift-n" :new-file]
 
+ [:tabs "-pmeta-8" (:tabs.goto 7)]
+ [:tabs "-pmeta-9" (:tabs.goto :last)]
+ [:tabs "-pmeta-2" (:tabs.goto 1)]
+ [:tabs "-pmeta-3" (:tabs.goto 2)]
+ [:tabs "-pmeta-4" (:tabs.goto 3)]
+ [:tabs "-pmeta-5" (:tabs.goto 4)]
+ [:tabs "-pmeta-6" (:tabs.goto 5)]
+ [:tabs "-pmeta-7" (:tabs.goto 6)]
+ [:tabs "-pmeta-shift-[" :tabs.prev]
+ [:tabs "-pmeta-shift-]" :tabs.next]
+ [:tabs "-pmeta-w" :tabs.close]
+
+ [:tabs "pmeta-[" :tabs.prev]
+ [:tabs "pmeta-]" :tabs.next]
+ [:tabs "ctrl-q" :tabs.close]
  [:tabs "alt-1" (:tabs.goto 0)]
  [:tabs "alt-2" (:tabs.goto 1)]
  [:tabs "alt-3" (:tabs.goto 2)]
@@ -24,12 +41,13 @@
  [:tabs "alt-8" (:tabs.goto 7)]
  [:tabs "alt-9" (:tabs.goto :last)]
 
+ [:editor "alt-w" :editor.watch.watch-selection]
+ [:editor "alt-shift-w" :editor.watch.unwatch]
+ [:editor "ctrl-b" :lt.plugins.gblame/toggle-git-blame]
+ [:editor.keys.normal.emmet "-tab" :editor.codemirror.command "emmet.expand_abbreviation_with_tab"]
+
  [:filter-list.input "ctrl-n" (:filter-list.input.move-selection 1)]
  [:filter-list.input "ctrl-p" (:filter-list.input.move-selection -1)]
-
- [:app "ctrl-m" :workspace.show]
- [:app "-pmeta-n" :new-file]
- [:editor "ctrl-b" :lt.plugins.gblame/toggle-git-blame]
 
  ;; To subtract a binding, prefix the key with '-'  e.g.
  ;;  [:app "-ctrl-shift-d" :docs.search.show]
